@@ -1,0 +1,10 @@
+json.id @word.id
+json.content @word.content
+json.noun @word.noun
+json.verb @word.verb
+json.adjective @word.adjective
+json.pronoun @word.pronoun
+json.preposition @word.preposition
+json.article @word.article
+json.conjunction @word.conjunction
+json.adverb @word.adverb

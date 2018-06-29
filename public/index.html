@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My App</title>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.js"></script>
+  <script src="index.js" defer></script>
+
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+
+</head>
+<body>
+  <div id="vue-app">
+
+  <a href="/#/">Home</a>
+  <a href="/#/signup">Create Profile</a>
+  <a href="/#/game_plays">Leader Board</a>
+  <a href="/#/users">Users</a>
+
+    <router-view></router-view>
+
+  </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
+
+<template id="home-page">
+  <div class="vue-component">
+    <div class="container">
+
+       <h1>{{ message }}</h1>
+
+    </div>
+  </div>
+</template>
+
+
+<template id="user-new-page">
+  <div class="vue-component">
+    <div class="container">
+
+       <h3>Create a Profile</h3>
+
+        <div>
+          Username: <input type="text" name="username">
+        </div>
+        <div>
+          Name: <input type="text" name="name">
+        </div>
+        <div>
+          City: <input type="text" name="city">
+        </div>
+        <div>
+          State: <input type="text" name="state">
+        </div>
+        <div>
+          Mini Bio: <input type="text" name="mini_bio">
+        </div>
+        <div>
+          Age: <input type="text" name="age">
+        </div>
+        <button class="btn btn-primary" v-on:click="submit()">Submit</button>
+
+    </div>
+  </div>
+</template>
+
+
+<template id="user-index-page">
+  <div class="vue-component">
+    <div class="container">
+      <h3>Users</h3>
+        
+        <div v-for="user in users">
+          
+          <h4>Username: {{ user.username }}</h4>
+          <h4>Name: {{ user.name }} </h4>
+          <h4>City:  {{ user.city }}</h4>
+          <h4>State: {{ user.state  }}</h4>
+          <h4>Mini_bio:  {{ user.mini_bio  }}</h4>
+          <h4>Age:  {{ user.age }}</h4>
+
+
+          <a v-bind:href="'/#/users/' + user['id']" class="btn btn-primary float-left">More Info</a>
+          <br>
+        </div>
+
+    </div>
+  </div>
+</template>
+
+<template id="user-show-page">
+  <div class="vue-component">
+    <div class="container">
+
+      <h3>Username: {{ user.username }} </h3>
+      <h3>Name: {{ user.name }} </h3>
+      <h3>City:  {{ user.city  }} </h3>
+      <h3>State:  {{ user.state  }} </h3>
+      <h3>Mini Bio:  {{ user.mini_bio  }}</h3>
+      <h3>Age:  {{ user.age  }} </h3>
+       
+    </div>
+  </div>
+</template>
+
+
+<template id="gameplay-index-page">
+  <div class="vue-component">
+    <div class="container">
+
+     <h3>High Scores</h3>
+
+     <div v-for="gameplay in gameplays">
+
+        <h4><a v-bind:href="'/#/users/' + gameplay['user_id'] "> User ID: {{ gameplay.user_id }}</a> </h4>
+        <h4>Score: {{ gameplay.score }} </h4>
+
+        <br>
+
+     </div>
+
+    </div>
+  </div>
+</template>
+
+

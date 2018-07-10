@@ -2,6 +2,8 @@ class Api::WordsController < ApplicationController
   
   def index
     @words = Word.all
+    @word_types = @words.map { |word| word.prompts }.flatten!.uniq
+
     render 'index.json.jbuilder'
   end
 

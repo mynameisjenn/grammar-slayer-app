@@ -8,9 +8,10 @@ Rails.application.routes.draw do
 
     get '/users' => 'users#index'
     get '/users/:id' => 'users#show'
+    get '/users/username/:username' => 'users#show'
     post '/users/new' => 'users#create'
     patch '/users/:id' => 'users#update'
-    delete 'users/:id' => 'users#destroy'
+    delete '/users/:id' => 'users#destroy'
     
     get '/game_plays' => 'game_plays#index'
     get '/game_plays/:id' => 'game_plays#show'

@@ -1,7 +1,7 @@
 class Api::WordsController < ApplicationController
   
   def index
-    @words = Word.all
+    @words = Word.all.limit(15)
     @word_types = @words.map { |word| word.prompts }.flatten!.uniq
 
     render 'index.json.jbuilder'

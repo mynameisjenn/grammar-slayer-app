@@ -1,6 +1,6 @@
 class Api::GamePlaysController < ApplicationController
   def index
-    @game_plays = GamePlay.all.order(score: :desc)
+    @game_plays = GamePlay.limit(10).order(score: :desc)
     render 'index.json.jbuilder'
   end
 
@@ -18,7 +18,7 @@ class Api::GamePlaysController < ApplicationController
                               )
 
     @game_play.save
-    render 'index.json.jbuilder'
+    render 'show.json.jbuilder'
   end
   
 end

@@ -6,8 +6,14 @@ class Api::UsersController < ApplicationController
   end
 
   def show
-    user_id = params[:id]
-    @user = User.find(user_id)
+    if params[:username]
+      user_name = params[:username]
+      @user = User.find_by(username: user_name)  
+    else
+      user_id = params[:id]
+      @user = User.find(user_id)
+    end
+
     render 'show.json.jbuilder'
   end
 

@@ -15,4 +15,5 @@ class Word < ApplicationRecord
     list.each { |prompt| eval("collection << prompt if #{prompt}") }
     collection
   end
+
 end

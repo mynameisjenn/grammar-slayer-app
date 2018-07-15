@@ -72,40 +72,199 @@
 # ])
 
 
-    # word = Word.new(content: "fly", noun:true, verb:true, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+# throughout  27  (preposition, adverb)
+# despite 17      (preposition, noun)
+# concerning  3   (preposition, adjective)
+
+# to  4951        (preposition, adverb)
+# in  2822        (preposition, adverb)
+
+# on  1087        (preposition, adverb, adjective)
+# by  706         (preposition, adverb)
+# about   451     (preposition, adverb, adjective)
+
+# like    324     (preposition, verb, conjunction)
+
+# through 235     (preposition, adverb, adjective)
+# over    170     (preposition, adjective, noun)
+
+
+# between 137     (preposition, adverb)
+# after   110     (preposition, adjective, adverb)
+
+# under   70      (preposition, adverb, adjective)
+# within  46      (preposition, adverb)
+# along   45      (preposition, adverb)
+# following   39  (preposition, noun, adjective)
+# across  36      (preposition, adverb, adjective)
+# behind  22      (preposition, adverb, adjective)
+# beyond  20      (preposition, noun)
+# plus    14      (preposition, adjective, noun)
+# except  6       (preposition, conjunction, idiom)
+
+# up  296         (adverb, preposition, adjective)
+# out 294         (adverb, preposition, adjective)
+# around  101     (adverb, preposition)
+# down    94      (adverb, preposition, adjective)
+# off 74          (adverb, preposition, adjective)
+# above   40      (adverb, preposition, adjective)
+# near    13      (adverb, preposition, adjective)
+
+
+## rake db:seeded already
+
+    # word = Word.new(content: "with", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "sister", noun:true, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "at", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "fluffy", noun:false, verb:false, adjective:true, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "from", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "write", noun:false, verb:true, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "into", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
+    # word.save
+    
+    # word = Word.new(content: "during", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "lion", noun:true, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "including", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "break", noun:true, verb:true, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "against", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "cloudy", noun:false, verb:false, adjective:true, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "among", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "biscuit", noun:true, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "towards", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "waves", noun:true, verb:true, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+
+    # word = Word.new(content: "upon", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:false, adverb:false)
     # word.save
 
-    # word = Word.new(content: "terrific", noun:false, verb:false, adjective:true, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+
+    word = Word.new(content: "since", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    word.save
+
+    word = Word.new(content: "without", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    word.save
+    
+
+    word = Word.new(content: "before", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    word.save
+
+    word = Word.new(content: "and", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "or", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "but", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    word.save
+
+    word = Word.new(content: "nor", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "while", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "whether", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "wherever", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "whenever", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "when", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "what", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "until", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "unless", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "nor", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+    word = Word.new(content: "so", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    word.save
+
+
+
+## rake db:seeded already
+
+    # word = Word.new(content: "for", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:false)
     # word.save
 
-    # word = Word.new(content: "energetic", noun:false, verb:false, adjective:true, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "yet", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:true)
     # word.save
 
-    # word = Word.new(content: "sushi roll", noun:true, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)
+    # word = Word.new(content: "after", noun:false, verb:false, adjective:true, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "although", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "because", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "for", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "before", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    # word.save
+
+    # word = Word.new(content: "once", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:true)
+    # word.save
+
+    # word = Word.new(content: "since", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:true)
+    # word.save
+
+    # word = Word.new(content: "though", noun:false, verb:false, adjective:false, pronoun:false, preposition:false, article:false, conjunction:true, adverb:true)
+    # word.save
+
+    # word = Word.new(content: "as", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "till", noun:false, verb:false, adjective:false, pronoun:false, preposition:true, article:false, conjunction:true, adverb:false)
+    # word.save
+
+
+   ## rake db:seeded already
+
+    # word = Word.new(content: "I", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "you", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "we", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "me", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "they", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "him", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "her", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "us", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
+    # word.save
+
+    # word = Word.new(content: "them", noun:true, verb:false, adjective:false, pronoun:true, preposition:false, article:false, conjunction:false, adverb:false)
     # word.save
 
     # word = Word.new(content: "chews", noun:false, verb:true, adjective:false, pronoun:false, preposition:false, article:false, conjunction:false, adverb:false)

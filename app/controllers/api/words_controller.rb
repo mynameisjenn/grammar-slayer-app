@@ -1,8 +1,39 @@
 class Api::WordsController < ApplicationController
   
   def index
-    @words = Word.all.limit(15)
-    @word_types = @words.map { |word| word.prompts }.flatten!.uniq
+
+    level = params[:level].to_i
+
+    @words =  Word.where(noun: true).sample(10)
+    @words += Word.where(verb: true).sample(10)
+    @words += Word.where(adjective: true).sample(10)
+
+    @word_types = ["noun", "verb", "adjective"]
+
+    if level >= 2
+      @words += Word.where(pronoun: true).sample(10)
+      @word_types << "pronoun"
+    end
+
+    if level >= 3
+      @words += Word.where(preposition: true).sample(10) 
+      @word_types << "preposition"
+    end
+
+    if level >= 4
+      @words += Word.where(conjunction: true).sample(10)
+      @word_types << "conjunction" 
+    end
+
+    if level >= 5
+      @words += Word.where(adverb: true).sample(10)
+      @word_types << "adverb"
+    end      
+
+    if level >= 6
+      @words += Word.where(article: true).sample(3)
+      @word_types << "article"
+    end
 
     render 'index.json.jbuilder'
   end
@@ -24,6 +55,7 @@ class Api::WordsController < ApplicationController
                         article: params[:article],
                         conjunction: params[:conjunction],
                         adverb: params[:adverb]
+
                         )
     @word.save
     render 'show.json.jbuilder'

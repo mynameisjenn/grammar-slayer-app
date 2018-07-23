@@ -10,7 +10,10 @@ h3, h1 {
     bottom: 0;
     width: 100%;
     background-color:#1B2631;
-    color: white;
+    color: #6f42c1;
     text-align: center;
 } 
 
+#links {
+  text-align: center;
+}

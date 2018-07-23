@@ -72,7 +72,7 @@ var UserNewPage = {
         age: this.age
       };
       axios
-        .post("/users/new", params)
+        .post("/api/users/new", params)
         .then(function(response) {
           router.push("/#/");
         })

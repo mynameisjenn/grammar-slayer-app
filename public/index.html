@@ -43,7 +43,14 @@
 
 
 <div class="footer">
-  <a href="/#/">Site Map</a>
+  <p></p>
+  <div>
+  <p>Built with <i class="fa fa-heart" aria-hidden="true"></i> by Jennifer Hatton</p>
+  <!-- <a href="https://github.com/mynameisjenn" ><i class="fa fa-github fa-lg" aria-hidden="true"></i></a>
+  <a href="https://www.linkedin.com/in/jenniferlynnhatton/"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a>
+  <a href="https://medium.com/@mynameisjenn"><i class="fa fa-medium fa-lg" aria-hidden="true"></i></a> -->
+</div>
+
 </div>
 
 
@@ -74,21 +81,14 @@
           <div class="lead mb-3 text-mono text-success">Let's play!</div>
           <div class="text-mono">
             <a href="#!"
-               title="Download Theme"
-               class="btn btn-success btn-shadow px-3 my-2 ml-0 text-left">
-              Download Game
-            </a>
-            <a href="#!"
                class="btn btn-danger btn-shadow px-3 my-2 ml-0 ml-sm-1 text-left">
-              Download Game
+              Word Drop
             </a>
           </div>
 
-          <div class="text-darkgrey text-mono my-2">Some muted text</div>
+          <div class="text-darkgrey text-mono my-2">Be the first to try out our game on Grammar Slayer. Watch the words drop, match the part of
+          speech. Get points. Download the game today!</div>
 
-          <p class="mt-5 text-grey text-spacey">
-            Welcome to Grammar Slayer. It is my hope that you find some fun, while learning. 
-          </p>
         </div>
       </div>
   </div>
@@ -111,36 +111,41 @@
 
       <form>
           <div class="col-md-6 mb-2">
-            <input type="text" class="form-control" id="validationDefault01" placeholder="Full name" value="Name" required>
+            <input type="text" class="form-control" v-model="name" id="validationDefault01" placeholder="Full name" value="Name" required>
           </div>
           
           <div class="col-md-6 mb-2">
             <div class="input-group">
+              
               <div class="input-group-prepend">
                 <span class="input-group-text" id="inputGroupPrepend2">@</span>
               </div>
-              <input type="text" class="form-control" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required>
+              <input type="text" class="form-control" v-model="username" id="validationDefaultUsername" placeholder="Username" aria-describedby="inputGroupPrepend2" required >
+
             </div>
           </div>
         
         
           <div class="col-md-6 mb-2">
-            <input type="text" class="form-control" id="validationDefault03" placeholder="City" required>
+          
+            <input type="text" class="form-control" v-model="city" id="validationDefault03" placeholder="City" required> 
           </div>
 
           <div class="col-md-6 mb-2">
-            <input type="text" class="form-control" id="validationDefault04" placeholder="State" required>
+            
+            <input type="text" class="form-control" v-model="state" id="validationDefault04" placeholder="State" required>
           </div>
 
           <div class="col-md-6 mb-2">
-            <input type="text" class="form-control" id="validationDefault05" placeholder="Age" required>
+            
+            <input type="text" class="form-control" v-model="age" id="validationDefault05" placeholder="Age" required>
           </div>
 
           <div class="input-group col-md-6">
               <div class="input-group-prepend">
                 <span class="input-group-text">Mini Bio</span>
               </div>
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+            <textarea class="form-control" v-model="mini_bio" aria-label="With textarea"></textarea>
           </div>
         
         <button class="btn btn-primary btn-shadow px-3 my-2 ml-0 text-right" v-on:click="submit()">Submit</button>
@@ -223,8 +228,4 @@
      </div>
     </div>
   </div>
-
-  <div class="footer">
-  <p><a href="/#/">Site Map</a></p>
-</div>
 </template>
